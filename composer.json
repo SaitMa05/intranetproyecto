@@ -4,8 +4,7 @@
     "type": "project",
     "authors": [
         {
-            "name": "Matias Ezequiel Morelli",
-            "email": "matiasmorellieestn1@gmail.com"
+            "name": "Matias Ezequiel Morelli"
         }
     ],
     "require": {
