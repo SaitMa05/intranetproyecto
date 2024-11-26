@@ -1,0 +1,98 @@
+.estadisticas{
+    background-color: $azulClaro;
+    border-radius: 10px;
+
+    .estadisticas-cont{
+        // display: flex;
+        // justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+
+
+
+        .estadistica{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            justify-content: space-around;
+            align-items: center;
+
+            @include desktop{
+                flex-direction: row;
+                // margin-bottom: 0;
+                margin-top: 0;
+            }
+
+            h2{
+                color: white;
+                font-size: 1.6rem;
+            }
+
+        }
+
+        .estadisticaLine{
+            h2{
+                color: $blanco;
+            }
+        }
+
+        
+
+        
+    }
+}
+#tiposPersonas{
+    width: 80%;
+    @include desktop{
+        width: 26%;
+    }
+
+    label{
+        color: white;
+    }
+}
+#personasSolas{
+    width: 80%;
+    @include desktop{
+        width: 26%;
+    }
+
+    label{
+        color: white;
+    }
+}
+#horarioPico{
+    width: 80%;
+    margin: auto;
+    @include desktop{
+        width: 60%;
+    }
+
+    label{
+        color: white;
+    }
+}
+
+#personasEdad{
+    width: 80%;
+    margin: auto;
+    @include desktop{
+        width: 60%;
+    }
+
+    label{
+        color: white;
+    }
+}
+#edadesTodas{
+    width: 80%;
+    margin: auto;
+    @include desktop{
+        width: 60%;
+    }
+
+    label{
+        color: white;
+    }
+}

@@ -1,0 +1,44 @@
+.puertas{
+    .puertas-cont{
+        .puerta{
+            button{
+                border-radius: 6px;
+            }
+            .historial{
+                border-radius: 1rem;
+                li{
+                    list-style-type: none;
+                    border-bottom: 1px solid gray;
+
+                    &:last-child{
+                        border-bottom: none;
+                        border-radius: 0 0 6px 6px;
+                    }
+
+                    
+
+                    &::before {
+                        content: "🕑"; 
+                        color: green;
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+.btn-puertas{
+    background-color: #f73939;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover{
+        background-color: lighten(#f73939, 10%);
+        color: white;
+        list-style-type: none;
+    }
+}

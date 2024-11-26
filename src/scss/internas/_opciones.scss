@@ -1,0 +1,29 @@
+.opciones{
+    background-color: $turquesa;
+    
+    .opciones-cont{
+        display: flex;
+        // justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+        padding: 1rem;
+        // margin: 0 15rem;
+
+        .opcion{
+            // padding: 0.2rem;
+            p{
+                margin: 0;
+                color: $blanco;
+                font-size: 1.6rem;
+                padding: 0.2rem;
+                background-color: $amarilloClaro;
+                transition: all 0.3s;
+                
+                &:hover{
+                        background-color: $amarillo;
+                }
+            }
+
+        }
+    }
+}

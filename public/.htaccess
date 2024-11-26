@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirigir la raíz "/" al dashboard
+    RewriteRule ^/?$ dashboard [L,R=302]
+
+    # Redirigir con barra final si no es una carpeta
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Manejar Front Controller: redirigir todo a index.php si no es un archivo o carpeta
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+
+    # Eliminar index.php de las URLs
+    RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+    # Proteger archivos sensibles en public
+    <FilesMatch "\.(env|ini|git|htaccess|log)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>

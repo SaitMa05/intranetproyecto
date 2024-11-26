@@ -1,0 +1,63 @@
+# Habilitar el módulo de reescritura
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si el archivo o directorio no existe en public_html, redirige a /public
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Redirigir la raíz "/" al dashboard
+    RewriteRule ^/?$ /dashboard [L,R=302]
+
+    # Redirigir con barra final si no es una carpeta
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Manejar Front Controller: redirigir todo a index.php si no es un archivo o carpeta
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ public/index.php [L]
+
+    # Eliminar index.php de las URLs
+    RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+</IfModule>
+
+# Proteger archivos sensibles en la raíz y en public
+<FilesMatch "\.(env|ini|git|htaccess|log)$">
+    Require all denied
+</FilesMatch>
+
+# Habilitar el módulo de reescritura
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si el archivo o directorio no existe en public_html, redirige a /public
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Redirigir la raíz "/" al dashboard
+    RewriteRule ^/?$ public/dashboard [L,R=302]
+
+    # Redirigir con barra final si no es una carpeta
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Manejar Front Controller: redirigir todo a index.php si no es un archivo o carpeta
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ public/index.php [L]
+
+    # Eliminar index.php de las URLs
+    RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+</IfModule>
+
+# Proteger archivos sensibles en la raíz y en public
+<FilesMatch "\.(env|ini|git|htaccess|log)$">
+    Require all denied
+</FilesMatch>

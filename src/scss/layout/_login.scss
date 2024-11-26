@@ -1,0 +1,17 @@
+.formLogin{
+    width: 90%;
+    margin: auto;
+
+    @include tablet{
+        width: 60%;
+    }
+    @include desktop{
+        width: 30rem;
+    }
+
+    input{
+        border-radius: none;
+    }
+
+    
+}

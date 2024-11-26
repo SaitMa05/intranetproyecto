@@ -1,0 +1,34 @@
+.estadisticas{
+    h2{
+        color: $blanco;
+    }
+
+    .estadisticas-cont{
+    }
+    .chart{
+        width: 260px; 
+        height: auto;
+    }
+    .chart3{
+        width: 100%;
+        // margin-bottom: 20rem;
+
+    }
+    .c3-axis-y path,
+    .c3-axis-y line,
+    .c3-axis-y text {
+    stroke: white;
+    // fill: white;   
+    }
+    .c3-axis-x path,
+    .c3-axis-x line,
+    .c3-axis-x text {
+    stroke: white;
+    // fill: white;   
+    }
+
+    .c3-legend-item text {
+        fill: $blanco !important; /* Cambia 'red' por el color que prefieras */
+    }
+}
+

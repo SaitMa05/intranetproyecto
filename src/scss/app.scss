@@ -1,0 +1,21 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+@import 'base/botones';
+
+
+
+// Internas
+
+
+@import 'layout/login';
+@import 'layout/dashboard';
+@import 'layout/asistencias';
+@import 'layout/puertas';
+@import 'layout/admin';
+@import 'layout/modalForm';
+@import 'layout/emailsend';
+@import 'layout/puertas-admin';
+@import 'layout/estadisticas';

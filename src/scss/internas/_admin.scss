@@ -1,0 +1,148 @@
+#appAdmin{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    // height: auto;
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+    .izquierda{
+        flex: 1;
+        background-color: $turquesa;
+        padding: 1rem;
+
+        #lista-personas{
+            display: flex;
+            flex-direction: column;
+            border: none;
+            width: 100%;
+            justify-content: center;
+            margin: auto;
+            background-color: $turquesaOscuro;
+            gap: 1rem;
+            padding: 0.6rem;
+            text-align: center;
+            cursor: pointer;
+            // align-items: center;
+            
+            
+            .opcion-admin{
+                padding: 1rem;
+                align-items: center;
+                text-align: center;
+                margin: auto;
+                
+                p{
+                    margin: 0;
+                    font-size: 2rem;
+                    color: $blanco;
+                    
+                }
+        }
+    }
+
+        #lista-container{
+            width: 100%;
+            .persona-lista{
+                display: flex;
+                flex-direction: row; 
+                background-color: $blanco;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+
+                @include tablet{
+                    flex-direction: row;
+                }
+                p{
+                    color: $negro;
+                    font-size: 1.6rem;
+                    margin: 0.6rem;
+                }
+            }
+        }
+    }
+    .derecha{
+        flex: 5;
+        background-color: $turquesa;
+
+
+        .info-admin{
+            h2{
+                color: $blanco;
+            }
+            .info-admin-cont{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 3rem;
+                gap: 2rem;
+                text-align: center;
+
+                @include desktop{
+                    flex-direction: row;
+                    text-align: start;
+                }
+                p{
+                    color: $blanco;
+                    font-size: 1.6rem;
+
+                    span{
+                        font-weight: $bold;
+                        color: $amarilloClaro;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.estadisticas{
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    // justify-content: center;
+
+    @include desktop{
+        justify-content: start;
+    }
+
+    .estadisticas-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+
+        @include desktop{
+            flex-direction: row;
+            justify-content: start;
+            margin: 0.1rem;
+        }
+    }
+
+    .usuarios-chart{
+        padding: 2rem;
+        p{
+            color: $blanco;
+
+            &:nth-child(2){
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.c-b{
+    color: $blanco;
+    font-weight: $bold;
+}
+.f-s{
+    font-size: 1.6rem;
+}

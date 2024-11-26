@@ -1,0 +1,104 @@
+.admin-cont-page{
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+    }
+    gap: 20px;
+}
+.sidebar {
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    @include desktop{
+        flex: 1;
+        height: 100vh;
+        width: 300px;
+    }
+    // position: fixed;
+    background-color: $azulClaro;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+}
+.sidebar .menu-item {
+    color: $menuColor;
+    font-weight: 500;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.sidebar .menu-item:hover {
+    background-color: #e9ecef;
+    color: $azulOscuro;
+}
+.sidebar .collapse .dropdown-item {
+    padding: 6px 30px;
+    margin-bottom: 6px;
+    color: $blanco;
+    text-decoration: none;
+
+    /* Añadir un punto antes del texto */
+    &::before {
+        content: "•"; /* Esto añade el punto */
+        margin-right: 10px; /* Espacio entre el punto y el texto */
+        color: $blanco; /* Color del punto */
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $naranja;
+    }
+}
+
+.dropdown-item{
+    padding-left: 30px;
+    color: $blanco;
+    padding: 6px;
+    transition: 0.2s;
+    font-size: 14px;
+
+    &::before {
+        content: "•"; /* Esto añade el punto */
+        margin-right: 10px; /* Espacio entre el punto y el texto */
+        color: $blanco; /* Color del punto */
+    }
+
+    &:hover{
+        background-color: transparent;
+        color: $naranja
+    }
+}
+.sidebar .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.paginado{
+    flex: 5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.dashboard-menu{
+    text-decoration: none;
+    color: $blanco;
+}
+
+.info-table{
+    word-break: break-word; /* Para navegadores modernos */
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,50 @@
+.table-puertas{
+    background-color: $azulClaro;
+    color: white;
+    border-radius: 6px;
+    
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{
+    background-color: white;
+    border-radius: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.dataTables_filter{
+    label{
+        input{
+            color: white;
+            background-color: $azulClaro;
+            border: 1px solid white;
+            border-radius: 6px;
+            padding: 6px;
+            margin-left: 10px;
+            &:focus{
+                background-color: $azulClaro;
+                color: white;
+            }
+        }
+    }
+}
+
+.cont-table-puerta{
+    width: 100%;
+    text-align: end;
+
+    h2{
+        text-align: center;
+    }
+
+    .btnCrear{
+        margin-top: 2rem;
+        text-align: end;
+    }
+}
+
+.dataTables_length{
+    margin-bottom: 2rem;
+}

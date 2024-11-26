@@ -1,0 +1,47 @@
+.header{
+    background-color: $turquesaMedio;
+    padding: 0.6rem;
+    a{
+        color: $blanco;
+    }
+    
+
+    .header-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 15rem;
+
+        @include tablet{
+            flex-direction: row;
+        }
+
+        .derecha{
+
+            .nav{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                .filtros{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    margin: 0;
+
+                    button, input{
+                        padding: 0.6rem;
+                        border: none;
+                        outline: none;
+                    }
+                    button{
+                        background-color: $amarillo;
+                        color: $blanco;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
