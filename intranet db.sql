@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2024 at 02:48 PM
+-- Generation Time: Nov 26, 2024 at 02:52 PM
 -- Server version: 8.0.40
 -- PHP Version: 7.4.33
 
@@ -897,7 +897,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `nombreUsuario`, `dni`, `telefono`, `email`, `password`, `aceptado`, `fechaCreacion`, `fechaModificacion`, `fechaEliminacion`, `creadoPor`, `modificadoPor`, `eliminadoPor`, `aceptadoPor`, `fkRol`, `token`, `token_expiracion`, `dni1`, `dni2`, `dni3`) VALUES
-(42, 'Prueba', 'Prueba', 'MEM', '00000000', '00000000', '@gmail.com', '$2y$10$T0E1BXjkArHwa3H0PulhN.lE3KEmtGohb2z7xKnadn/jO80FgEEO6', 1, '2024-11-21 23:50:30', '2024-11-22 00:07:37', NULL, 'admin', 'MEM', '', NULL, 2, NULL, NULL, 'No hay imagen. Creado en Admin', 'No hay imagen. Creado en Admin', 'No hay imagen. Creado en Admin');
+(42, 'Prueba', 'Prueba', 'MEM', '00000000', '00000000', '@gmail.com', '$2y$10$T0E1BXjkArHwa3H0PulhN.lE3KEmtGohb2z7xKnadn/jO80FgEEO6', 1, '2024-11-21 23:50:30', '2024-11-22 00:07:37', NULL, 'noc', '', '', NULL, 2, NULL, NULL, 'No hay imagen. Creado en Admin', 'No hay imagen. Creado en Admin', 'No hay imagen. Creado en Admin');
 
 --
 -- Indexes for dumped tables
